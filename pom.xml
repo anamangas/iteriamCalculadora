@@ -12,6 +12,9 @@
 	<groupId>iteriam.test4</groupId>
 	<artifactId>calculadora</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
+
+	<packaging>pom</packaging>
+
 	<name>Calculadora</name>
 	<description>Prueba tecnica de Iteriam</description>
 
@@ -26,11 +29,11 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-       	<dependency>
-			<groupId>io.corp.calculator</groupId>
-			<artifactId>tracer</artifactId>
-			<version>1.0.0</version>
-		</dependency>
+<!--       	<dependency>-->
+<!--			<groupId>io.corp.calculator</groupId>-->
+<!--			<artifactId>tracer</artifactId>-->
+<!--			<version>1.0.0</version>-->
+<!--		</dependency>-->
 
 		<dependency>
 			<groupId>io.springfox</groupId>
@@ -54,4 +57,11 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<modules>
+		<module>controller</module>
+		<module>dto</module>
+		<module>service</module>
+		<module>boot</module>
+	</modules>
 </project>
