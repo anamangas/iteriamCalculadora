@@ -22,5 +22,12 @@
             <artifactId>dto</artifactId>
             <version>${project.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>io.corp.calculator</groupId>
+            <artifactId>tracer</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
     </dependencies>
 </project>

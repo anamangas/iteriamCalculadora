@@ -34,6 +34,10 @@ public class ResultadoDTO {
         resultado = new BigDecimal(0);
     }
 
+    public ResultadoDTO(BigDecimal value){
+        resultado = value;
+    }
+
     public BigDecimal getResultado() {
         return resultado;
     }
