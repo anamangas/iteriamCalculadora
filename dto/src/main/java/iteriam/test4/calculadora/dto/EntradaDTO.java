@@ -6,9 +6,9 @@ import java.math.BigDecimal;
 
 public class EntradaDTO {
 
-	@ApiModelProperty(value = "Elemento aritmetico 1", required = true, example = "1", position = 1)
+	@ApiModelProperty(value = "Numero 1", required = true, example = "10", position = 1)
 	BigDecimal numero1;
-	@ApiModelProperty(value = "Elemento aritmetico 2", required = true, example = "1", position = 2)
+	@ApiModelProperty(value = "Numero 2", required = true, example = "5", position = 2)
 	BigDecimal numero2;
 
 	public EntradaDTO(BigDecimal numero1, BigDecimal numero2) {
