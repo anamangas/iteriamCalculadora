@@ -32,9 +32,9 @@ public class CalculadoraController {
      * @return Resultado de la suma
      */
     @ApiOperation(value = "Suma aritmetica", notes = "Devuelve la suma de dos elementos aritmeticos")
-    @ApiResponses(value = { @ApiResponse(code = 200, message = "OK", response = ResultadoDTO.class),
+    @ApiResponses(value = {@ApiResponse(code = 200, message = "OK", response = ResultadoDTO.class),
             @ApiResponse(code = 404, message = "Not Found", response = String.class),
-            @ApiResponse(code = 500, message = "Internal Server Error", response = String.class) })
+            @ApiResponse(code = 500, message = "Internal Server Error", response = String.class)})
     @PostMapping("/suma")
     public @ResponseBody
     ResponseEntity<ResultadoDTO> suma(
@@ -51,11 +51,12 @@ public class CalculadoraController {
      * @return Resultado de la resta
      */
     @ApiOperation(value = "Resta aritmetica", notes = "Devuelve la resta de dos elementos aritmeticos, el primero menos el segundo")
-    @ApiResponses(value = { @ApiResponse(code = 200, message = "OK", response = ResultadoDTO.class),
+    @ApiResponses(value = {@ApiResponse(code = 200, message = "OK", response = ResultadoDTO.class),
             @ApiResponse(code = 404, message = "Not Found", response = String.class),
-            @ApiResponse(code = 500, message = "Internal Server Error", response = String.class) })
+            @ApiResponse(code = 500, message = "Internal Server Error", response = String.class)})
     @PostMapping("/resta")
-    public @ResponseBody ResponseEntity<ResultadoDTO> resta(
+    public @ResponseBody
+    ResponseEntity<ResultadoDTO> resta(
             @ApiParam(value = "JSON con los numeros", required = true) @Valid @RequestBody EntradaDTO entrada) {
         ResultadoDTO resultado = calculadoraService.operacionBasica(Operacion.RESTA, entrada);
         return new ResponseEntity<>(resultado, HttpStatus.OK);

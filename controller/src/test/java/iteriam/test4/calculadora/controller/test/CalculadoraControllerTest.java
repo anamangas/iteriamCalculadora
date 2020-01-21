@@ -4,15 +4,13 @@ import iteriam.test4.calculadora.controller.CalculadoraController;
 import iteriam.test4.calculadora.dto.EntradaDTO;
 import iteriam.test4.calculadora.dto.Operacion;
 import iteriam.test4.calculadora.dto.ResultadoDTO;
-import iteriam.test4.calculadora.service.CalculadoraService;
 import iteriam.test4.calculadora.service.CalculadoraServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.Mockito;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.http.converter.json.GsonHttpMessageConverter;
 import org.springframework.test.web.servlet.MockMvc;
@@ -22,9 +20,7 @@ import java.math.BigDecimal;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,
-        classes= CalculadoraController.class)
-@ExtendWith( MockitoExtension.class )
+@ExtendWith(MockitoExtension.class)
 public class CalculadoraControllerTest {
 
     @InjectMocks
@@ -44,8 +40,8 @@ public class CalculadoraControllerTest {
         resultadoResta = new ResultadoDTO(new BigDecimal(5));
         resultadoSuma = new ResultadoDTO(new BigDecimal(15));
         this.mockMvc = MockMvcBuilders
-                .standaloneSetup( controller )
-                .setMessageConverters( new GsonHttpMessageConverter() )
+                .standaloneSetup(controller)
+                .setMessageConverters(new GsonHttpMessageConverter())
                 .build();
 
     }
