@@ -7,7 +7,6 @@ import java.math.BigDecimal;
 public class ResultadoDTO {
 
 
-
     @ApiModelProperty(value = "Resultado", required = true, example = "1", position = 1)
     BigDecimal resultado;
 
@@ -26,12 +25,15 @@ public class ResultadoDTO {
             break;
             default: {
             }
-            ;
         }
     }
 
     public ResultadoDTO() {
         resultado = new BigDecimal(0);
+    }
+
+    public ResultadoDTO(BigDecimal value) {
+        resultado = value;
     }
 
     public BigDecimal getResultado() {
