@@ -8,7 +8,6 @@ import iteriam.test4.calculadora.dto.EntradaDTO;
 import iteriam.test4.calculadora.dto.Operacion;
 import iteriam.test4.calculadora.dto.ResultadoDTO;
 import iteriam.test4.calculadora.service.CalculadoraService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,7 +19,6 @@ import javax.validation.Valid;
 public class CalculadoraController {
     private final CalculadoraService calculadoraService;
 
-    @Autowired
     public CalculadoraController(CalculadoraService calculadoraService) {
         this.calculadoraService = calculadoraService;
     }
