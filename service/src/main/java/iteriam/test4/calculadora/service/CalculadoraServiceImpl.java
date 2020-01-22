@@ -6,7 +6,6 @@ import iteriam.test4.calculadora.dto.Operacion;
 import iteriam.test4.calculadora.dto.ResultadoDTO;
 import org.springframework.stereotype.Service;
 
-@Service
 public class CalculadoraServiceImpl implements CalculadoraService {
 
     TracerImpl trazador = new TracerImpl();
